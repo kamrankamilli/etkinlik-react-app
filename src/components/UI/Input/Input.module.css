@@ -1,0 +1,10 @@
+input[type="date"] {
+  background-color: #efefef;
+  border: none;
+  outline: none;
+  font: inherit;
+  margin:20px;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+}

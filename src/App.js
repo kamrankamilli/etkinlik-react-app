@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import AllActivities from "./pages/AllActivities";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+import LoadingSpinner from "./components/UI/LoadingSpinner/LoadingSpinner";
+import { Suspense } from "react";
+import ActivityDetail from "./pages/ActivityDetail";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Suspense
+        fallback={
+          <div className="centered">
+            <LoadingSpinner />
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<AllActivities />}></Route>
+          <Route
+            path="/etkinlik/:activityId"
+            element={<ActivityDetail />}
+          ></Route>
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }
 

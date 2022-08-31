@@ -1,0 +1,12 @@
+.selectbox-control {
+}
+.selectbox-control select {
+  border: none;
+  outline: none;
+  font: inherit;
+  padding-right: 17px;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+}

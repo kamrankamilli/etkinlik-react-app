@@ -1,0 +1,8 @@
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.logo a{
+    text-decoration: none;
+    color:#777;
+}
